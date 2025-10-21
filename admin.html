@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Admin - Otaku Fun Concert 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🎤</span>
+                    <h1>Otaku Fun Concert</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="inscription.html">S'inscrire</a></li>
+                        <li><a href="verification.html">Vérification</a></li>
+                        <li><a href="admin.html" class="active"><i class="fas fa-cog"></i> Admin</a></li>
+                        <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="admin-section">
+        <div class="container">
+            <div class="admin-panel">
+                <div class="admin-header">
+                    <h2><i class="fas fa-tachometer-alt"></i> Tableau de Bord Administrateur</h2>
+                    <p class="admin-description">Gestion des inscriptions et confirmations de paiement</p>
+                </div>
+                
+                <div class="admin-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 id="total-inscriptions">0</h3>
+                        <p>Inscriptions totales</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 id="en-attente-count">0</h3>
+                        <p>En attente</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 id="confirmes-count">0</h3>
+                        <p>Confirmées</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3 id="revenus-total">0 FCFA</h3>
+                        <p>Revenus totaux</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-money-check"></i>
+                        </div>
+                        <h3 id="revenus-confirmes">0 FCFA</h3>
+                        <p>Revenus confirmés</p>
+                    </div>
+                </div>
+                
+                <div class="admin-tabs">
+                    <button class="admin-tab active" data-statut="">Toutes les inscriptions</button>
+                    <button class="admin-tab" data-statut="en_attente">En attente de confirmation</button>
+                    <button class="admin-tab" data-statut="confirmé">Inscriptions confirmées</button>
+                </div>
+                
+                <div class="admin-controls">
+                    <div class="filters">
+                        <div class="filter-group">
+                            <label for="filter-category"><i class="fas fa-filter"></i> Catégorie :</label>
+                            <select id="filter-category">
+                                <option value="">Toutes les catégories</option>
+                                <option value="chant">Chant</option>
+                                <option value="danse">Danse</option>
+                                <option value="imitation">Imitation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="search-name"><i class="fas fa-search"></i> Recherche :</label>
+                            <input type="text" id="search-name" placeholder="Nom ou téléphone">
+                        </div>
+                    </div>
+                    
+                    <div class="actions">
+                        <button class="btn btn-primary" id="export-btn">
+                            <i class="fas fa-download"></i> Exporter CSV
+                        </button>
+                        <button class="btn btn-secondary" id="refresh-btn">
+                            <i class="fas fa-sync-alt"></i> Actualiser
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Âge</th>
+                                <th>Contact</th>
+                                <th>Type</th>
+                                <th>Catégorie</th>
+                                <th>Montant</th>
+                                <th>Statut</th>
+                                <th>Date Inscription</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="registrations-table">
+                            <!-- Les données seront injectées ici par JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="no-data" id="no-data-message" style="display: none;">
+                    <p><i class="fas fa-info-circle"></i> Aucune inscription trouvée.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Otaku Fun Concert 2025</h3>
+                    <p>Talent Edition - 25 décembre 2025</p>
+                    <p>Parc du Cinquantenaire, Bamako</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Admin & Paiement</h3>
+                    <p>Email: admin@otakufunconcert.ml</p>
+                    <p>Paiement: +223 71 36 40 70</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Otaku Fun Concert. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>

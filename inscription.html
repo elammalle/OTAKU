@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Otaku Fun Concert 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🎤</span>
+                    <h1>Otaku Fun Concert</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="inscription.html" class="active">S'inscrire</a></li>
+                        <li><a href="verification.html">Vérifier Inscription</a></li>
+                        <li><a href="login.html">Espace Admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>Formulaire d'inscription</h2>
+                <p class="form-description">Rejoignez-nous pour le Otaku Fun Concert 2025 !</p>
+                
+                <div class="tarifs-info">
+                    <div class="tarif-card">
+                        <h3><i class="fas fa-user-check"></i> Participant</h3>
+                        <p class="prix">2 000 FCFA</p>
+                        <p>Chant, Danse ou Imitation</p>
+                    </div>
+                    <div class="tarif-card">
+                        <h3><i class="fas fa-user"></i> Assistant</h3>
+                        <p class="prix">1 500 FCFA</p>
+                        <p>Spectateur de l'événement</p>
+                    </div>
+                </div>
+                
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label for="type_inscription"><i class="fas fa-tag"></i> Type d'inscription *</label>
+                        <select id="type_inscription" name="type_inscription" required>
+                            <option value="">Choisissez votre type</option>
+                            <option value="participant">Participant (2 000 FCFA)</option>
+                            <option value="assistant">Assistant (1 500 FCFA)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="nom"><i class="fas fa-user"></i> Nom complet *</label>
+                        <input type="text" id="nom" name="nom" required placeholder="Votre nom complet">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age"><i class="fas fa-birthday-cake"></i> Âge *</label>
+                        <input type="number" id="age" name="age" min="12" max="60" required placeholder="Votre âge">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact"><i class="fas fa-phone"></i> Numéro de téléphone *</label>
+                        <input type="tel" id="contact" name="contact" required placeholder="+223 XX XX XX XX">
+                    </div>
+                    
+                    <div class="form-group" id="categorie-group" style="display: none;">
+                        <label for="categorie"><i class="fas fa-star"></i> Catégorie *</label>
+                        <select id="categorie" name="categorie">
+                            <option value="">Sélectionnez une catégorie</option>
+                            <option value="chant">🎵 Chant</option>
+                            <option value="danse">💃 Danse</option>
+                            <option value="imitation">🎭 Imitation</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="video-group" style="display: none;">
+                        <label for="video"><i class="fas fa-video"></i> Lien vidéo de démonstration *</label>
+                        <input type="url" id="video" name="video" placeholder="https://youtube.com/...">
+                        <small>Lien YouTube, Vimeo, ou autre plateforme de partage vidéo</small>
+                    </div>
+                    
+                    <div class="payment-info">
+                        <h3><i class="fas fa-money-bill-wave"></i> Instructions de Paiement</h3>
+                        <div class="payment-steps">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <p>Effectuez le transfert au numéro :</p>
+                                <p class="numero-paiement">+223 71 36 40 70</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <p>Montant à payer :</p>
+                                <p class="montant" id="montant-a-payer">-</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <p>Utilisez comme référence :</p>
+                                <p class="reference" id="reference-paiement">Votre nom</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="code_transaction"><i class="fas fa-receipt"></i> Code de transaction *</label>
+                        <input type="text" id="code_transaction" name="code_transaction" required placeholder="Code reçu après paiement">
+                        <small>Le code de confirmation reçu par SMS après votre transfert</small>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Soumettre mon inscription
+                        </button>
+                        <a href="verification.html" class="btn btn-secondary">
+                            <i class="fas fa-search"></i> Vérifier mon inscription
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Otaku Fun Concert 2025</h3>
+                    <p>Talent Edition - 25 décembre 2025</p>
+                    <p>Parc du Cinquantenaire, Bamako</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact & Paiement</h3>
+                    <p>Email: info@otakufunconcert.ml</p>
+                    <p>Paiement: +223 71 36 40 70</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Otaku Fun Concert. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

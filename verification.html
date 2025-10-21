@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérification Inscription - Otaku Fun Concert 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🎤</span>
+                    <h1>Otaku Fun Concert</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="inscription.html">S'inscrire</a></li>
+                        <li><a href="verification.html" class="active">Vérifier Inscription</a></li>
+                        <li><a href="login.html">Espace Admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="verification-section">
+        <div class="container">
+            <div class="verification-container">
+                <h2><i class="fas fa-search"></i> Vérifier mon inscription</h2>
+                <p class="verification-description">Entrez votre numéro de téléphone pour vérifier le statut de votre inscription</p>
+                
+                <form id="verification-form">
+                    <div class="form-group">
+                        <label for="phone_verification"><i class="fas fa-phone"></i> Numéro de téléphone *</label>
+                        <input type="tel" id="phone_verification" name="phone_verification" required placeholder="+223 XX XX XX XX">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-search"></i> Vérifier
+                        </button>
+                        <a href="inscription.html" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Retour à l'inscription
+                        </a>
+                    </div>
+                </form>
+                
+                <div id="verification-result" style="display: none;">
+                    <!-- Résultat de la vérification -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Otaku Fun Concert 2025</h3>
+                    <p>Talent Edition - 25 décembre 2025</p>
+                    <p>Parc du Cinquantenaire, Bamako</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact & Paiement</h3>
+                    <p>Email: info@otakufunconcert.ml</p>
+                    <p>Paiement: +223 71 36 40 70</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Otaku Fun Concert. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
